@@ -26,7 +26,6 @@ angular.module("slyce_app", [])
 					"end_time": Date.parse($scope.end_time)
 				})
 				.then(function (response) {
-					window.location.href = "/kjdshf";
 					$scope.createSessionReturnMsg = "Your Session Id: " + response.data.session_id;
 				}, function (error) {
 					console.log(error);
