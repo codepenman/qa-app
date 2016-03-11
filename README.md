@@ -23,7 +23,7 @@ Application for a professional athlete hosting a Question & Answer session with 
       b. ItelliJ IDE:-
             Import the project into IntelliJ.
             Run the application
-            Repository contains all the dependecies. OR else "cd ~/syce-app/ and npm install" will also download all the dependencies.
+            Repository contains all the dependecies. 
     5. Once the server is started, please go to any browser and type "http://localhost:3000/"
 
 
