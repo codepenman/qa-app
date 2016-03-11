@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script type="text/javascript" src="javascripts/slyceApp.js"></script>
+</head>
+<body ng-app="slyce_app" ng-controller="QASessionCntrl">
+<h1 align="center">Welcome to <%= title %></h1>
+<form target="_blank">
+    <fieldset>
+        <legend>1. Create Q&amp;A Session</legend>
+        <label>
+            Host: <input  type="text" ng-model="host">
+        </label>
+        <label>
+            Start Time: <input type="datetime-local" ng-model="start_time">
+        </label>
+        <label>
+            End Time: <input type="datetime-local" ng-model="end_time">
+        </label>
+        <button type="submit" ng-click="createQASession()">POST</button>
+    </fieldset>
+    <div>
+        <h4>{{createSessionReturnMsg}}</h4>
+    </div>
+</form>
+
+<form target="_blank">
+    <fieldset>
+        <legend>2. Get Q&amp;A Session</legend>
+        <label>
+            Session Id: <input type="text" ng-model="session_id">
+        </label>
+        <button type="submit" ng-click="getQASession()">GET</button>
+    </fieldset>
+    <div>
+        <h4>{{session_data}}</h4>
+    </div>
+</form>
+
+<form target="_blank">
+    <fieldset>
+        <legend>3. Ask a Question</legend>
+        <label>
+            Session Id: <input ng-model="session_id">
+        </label>
+        <label>
+            Question: <input ng-model="question">
+        </label>
+        <label>
+            Your Name: <input ng-model="asked_by_name">
+        </label>
+        <button type="submit" ng-click="askQuestion()">POST</button>
+    </fieldset>
+    <div>
+        <h4>{{askQuestionReturnMsg}}</h4>
+    </div>
+</form>
+
+<form target="_blank">
+    <fieldset>
+        <legend>4. Answer a Question</legend>
+        <label>
+            Question Id: <input ng-model="question_id">
+        </label>
+        <label>
+            Answer: <input ng-model="answer_text">
+        </label>
+        <label>
+            Image Url: <input ng-model="image_url">
+        </label>
+        <label>
+            Your Name: <input ng-model="answered_by_name">
+        </label>
+        <button type="submit" ng-click="postAnswer()">POST</button>
+    </fieldset>
+    <div>
+        <h4>{{postAnswerReturnMsg}}</h4>
+    </div>
+</form>
+
+<form target="_blank">
+    <fieldset>
+        <legend>5. Get Questions</legend>
+        <label>
+            Session Id: <input ng-model="session_id">
+        </label>
+        <button type="submit" ng-click="getQuestions()">GET</button>
+    </fieldset>
+    <div>
+        <h4>{{questions}}</h4>
+        <h4>{{message}}</h4>
+    </div>
+</form>
+</body>
+</html>
