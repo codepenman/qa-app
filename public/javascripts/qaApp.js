@@ -3,7 +3,7 @@
  * @Version: v1.0
  */
 
-angular.module("slyce_app", [])
+angular.module("qa_app", [])
 	.controller("QASessionCntrl", function ($scope, $http) {
 		/*
 		* This method will make an Asynchronous call to Create Question and Answer
