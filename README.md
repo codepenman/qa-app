@@ -1,4 +1,4 @@
-# slyce-app
+# qa-app
 
 Application for a professional athlete hosting a Question & Answer session with fans.
 
